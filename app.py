@@ -21,42 +21,27 @@ TEACHER_URL = "https://face-attendance-v2-d4tw52w5orezdevudep8xl.streamlit.app/"
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.markdown("#### 🧑‍💼 Admin")
-    st.markdown(
-        f"""
-        <a href="{ADMIN_URL}" target="_self">
-            <button style="width:100%;padding:12px;font-size:16px;">
-                Admin Dashboard
-            </button>
-        </a>
-        """,
-        unsafe_allow_html=True
+    st.subheader("🧑‍💼 Admin")
+    st.link_button(
+        "Open Admin Dashboard",
+        ADMIN_URL,
+        use_container_width=True
     )
 
 with col2:
-    st.markdown("#### 🧑‍🎓 Student")
-    st.markdown(
-        f"""
-        <a href="{STUDENT_URL}" target="_self">
-            <button style="width:100%;padding:12px;font-size:16px;">
-                Face Registration
-            </button>
-        </a>
-        """,
-        unsafe_allow_html=True
+    st.subheader("🧑‍🎓 Student")
+    st.link_button(
+        "Register Face",
+        STUDENT_URL,
+        use_container_width=True
     )
 
 with col3:
-    st.markdown("#### 🧑‍🏫 Teacher")
-    st.markdown(
-        f"""
-        <a href="{TEACHER_URL}" target="_self">
-            <button style="width:100%;padding:12px;font-size:16px;">
-                Take Attendance
-            </button>
-        </a>
-        """,
-        unsafe_allow_html=True
+    st.subheader("🧑‍🏫 Teacher")
+    st.link_button(
+        "Take Attendance",
+        TEACHER_URL,
+        use_container_width=True
     )
 
 st.divider()
