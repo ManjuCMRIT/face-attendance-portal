@@ -13,36 +13,24 @@ st.divider()
 
 st.markdown("### Select your role")
 
-# ✅ YOUR ACTUAL DEPLOYED URLs
 ADMIN_URL = "https://face-attendance-app-xt5yx9f8r5t3uygjft8qmj.streamlit.app/"
 STUDENT_URL = "https://face-registration-v2-ssfuhbl72wtwhc3hb2qmse.streamlit.app/"
 TEACHER_URL = "https://face-attendance-v2-d4tw52w5orezdevudep8xl.streamlit.app/"
 
-col1, col2, col3 = st.columns(3)
+st.markdown(f"""
+### 🧑‍💼 Admin  
+👉 [Open Admin Dashboard]({ADMIN_URL})
 
-with col1:
-    st.subheader("🧑‍💼 Admin")
-    st.link_button(
-        "Open Admin Dashboard",
-        ADMIN_URL,
-        use_container_width=True
-    )
+---
 
-with col2:
-    st.subheader("🧑‍🎓 Student")
-    st.link_button(
-        "Register Face",
-        STUDENT_URL,
-        use_container_width=True
-    )
+### 🧑‍🎓 Student  
+👉 [Face Registration]({STUDENT_URL})
 
-with col3:
-    st.subheader("🧑‍🏫 Teacher")
-    st.link_button(
-        "Take Attendance",
-        TEACHER_URL,
-        use_container_width=True
-    )
+---
+
+### 🧑‍🏫 Teacher  
+👉 [Take Attendance]({TEACHER_URL})
+""")
 
 st.divider()
 
