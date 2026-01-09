@@ -4,7 +4,7 @@ import streamlit as st
 # PAGE CONFIG
 # --------------------------------------------------
 st.set_page_config(
-    page_title="Face Attendance System",
+    page_title="Intelli-Attendance App",
     page_icon="🎓",
     layout="centered"
 )
