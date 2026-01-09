@@ -1,22 +1,31 @@
 import streamlit as st
 
-# --------------------------------------------------
+# ==================================================
 # PAGE CONFIG
-# --------------------------------------------------
+# ==================================================
 st.set_page_config(
     page_title="Intelli-Attendance App",
     page_icon="🎓",
     layout="centered"
 )
 
-# --------------------------------------------------
-# HEADER
-# --------------------------------------------------
+# ==================================================
+# LOGO
+# ==================================================
+col1, col2, col3 = st.columns([1, 2, 1])
+with col2:
+    st.image("assets/cmrit_logo.png", width=160)
+
+# ==================================================
+# TITLE & TAGLINE
+# ==================================================
 st.markdown(
     """
-    <h1 style="text-align:center;">🎓 Intelli-Attendance App</h1>
+    <h1 style="text-align:center; margin-bottom:0;">
+        Intelli-Attendance App
+    </h1>
     <p style="text-align:center; font-size:16px; color:gray;">
-        AI-powered, role-based attendance management
+        AI-Powered Face Recognition Attendance System
     </p>
     """,
     unsafe_allow_html=True
@@ -24,141 +33,81 @@ st.markdown(
 
 st.divider()
 
-# --------------------------------------------------
-# INTRO
-# --------------------------------------------------
+# ==================================================
+# DESCRIPTION
+# ==================================================
 st.markdown(
     """
     <div style="text-align:center; font-size:15px;">
-        This system provides <b>secure face-based attendance</b> through 
-        dedicated portals for <b>Admin</b>, <b>Students</b>, and <b>Teachers</b>.
+        A smart, secure, and scalable attendance system developed at  
+        <b>CMR Institute of Technology, Bengaluru</b>.
+        <br><br>
+        This system enables accurate face-based attendance with  
+        administrative control and manual verification.
     </div>
     """,
     unsafe_allow_html=True
 )
 
-st.markdown("<br>", unsafe_allow_html=True)
-
-# --------------------------------------------------
-# URLs (YOUR DEPLOYED APPS)
-# --------------------------------------------------
-ADMIN_URL = "https://face-attendance-app-xt5yx9f8r5t3uygjft8qmj.streamlit.app/"
-STUDENT_URL = "https://face-registration-v2-ssfuhbl72wtwhc3hb2qmse.streamlit.app/"
-TEACHER_URL = "https://face-attendance-v2-d4tw52w5orezdevudep8xl.streamlit.app/"
-
-# --------------------------------------------------
-# ROLE CARDS
-# --------------------------------------------------
-col1, col2, col3 = st.columns(3)
-
-with col1:
-    st.markdown(
-        """
-        <div style="
-            border:1px solid #e0e0e0;
-            border-radius:10px;
-            padding:20px;
-            text-align:center;
-        ">
-            <h3>🧑‍💼 Admin</h3>
-            <p style="font-size:14px;">
-                Manage classes, students, and system configuration
-            </p>
-            <a href="{0}" target="_blank">
-                <button style="
-                    width:100%;
-                    padding:10px;
-                    background-color:#4CAF50;
-                    color:white;
-                    border:none;
-                    border-radius:6px;
-                    font-size:15px;
-                    cursor:pointer;
-                ">
-                    Open Admin Dashboard
-                </button>
-            </a>
-        </div>
-        """.format(ADMIN_URL),
-        unsafe_allow_html=True
-    )
-
-with col2:
-    st.markdown(
-        """
-        <div style="
-            border:1px solid #e0e0e0;
-            border-radius:10px;
-            padding:20px;
-            text-align:center;
-        ">
-            <h3>🧑‍🎓 Student</h3>
-            <p style="font-size:14px;">
-                Register your face securely using your USN
-            </p>
-            <a href="{0}" target="_blank">
-                <button style="
-                    width:100%;
-                    padding:10px;
-                    background-color:#2196F3;
-                    color:white;
-                    border:none;
-                    border-radius:6px;
-                    font-size:15px;
-                    cursor:pointer;
-                ">
-                    Face Registration
-                </button>
-            </a>
-        </div>
-        """.format(STUDENT_URL),
-        unsafe_allow_html=True
-    )
-
-with col3:
-    st.markdown(
-        """
-        <div style="
-            border:1px solid #e0e0e0;
-            border-radius:10px;
-            padding:20px;
-            text-align:center;
-        ">
-            <h3>🧑‍🏫 Teacher</h3>
-            <p style="font-size:14px;">
-                Take attendance and generate reports
-            </p>
-            <a href="{0}" target="_blank">
-                <button style="
-                    width:100%;
-                    padding:10px;
-                    background-color:#FF9800;
-                    color:white;
-                    border:none;
-                    border-radius:6px;
-                    font-size:15px;
-                    cursor:pointer;
-                ">
-                    Take Attendance
-                </button>
-            </a>
-        </div>
-        """.format(TEACHER_URL),
-        unsafe_allow_html=True
-    )
-
-st.markdown("<br>", unsafe_allow_html=True)
-
-# --------------------------------------------------
-# FOOTER
-# --------------------------------------------------
 st.divider()
 
+# ==================================================
+# NAVIGATION BUTTONS
+# ==================================================
+st.subheader("🔗 Open Module")
+
+ADMIN_URL = "https://face-attendance-app-xt5yx9f8r5t3uygjft8qmj.streamlit.app/"
+ATTENDANCE_URL = "https://face-attendance-v2-d4tw52w5orezdevudep8xl.streamlit.app/"
+REGISTRATION_URL = "https://face-registration-v2-ssfuhbl72wtwhc3hb2qmse.streamlit.app/"
+
+colA, colB, colC = st.columns(3)
+
+with colA:
+    st.markdown(
+        f"""
+        <a href="{ADMIN_URL}" target="_blank">
+            <button style="width:100%; height:60px; font-size:16px;">
+                🛠 Admin Dashboard
+            </button>
+        </a>
+        """,
+        unsafe_allow_html=True
+    )
+
+with colB:
+    st.markdown(
+        f"""
+        <a href="{REGISTRATION_URL}" target="_blank">
+            <button style="width:100%; height:60px; font-size:16px;">
+                📸 Face Registration
+            </button>
+        </a>
+        """,
+        unsafe_allow_html=True
+    )
+
+with colC:
+    st.markdown(
+        f"""
+        <a href="{ATTENDANCE_URL}" target="_blank">
+            <button style="width:100%; height:60px; font-size:16px;">
+                🧑‍🏫 Take Attendance
+            </button>
+        </a>
+        """,
+        unsafe_allow_html=True
+    )
+
+st.divider()
+
+# ==================================================
+# FOOTER
+# ==================================================
 st.markdown(
     """
     <div style="text-align:center; font-size:13px; color:gray;">
-        Developed as an academic AI system for face recognition–based attendance<br>
-        Department of CSE • CMRIT
+        Developed as part of AI-based Academic Automation<br>
+        © CMR Institute of Technology
     </div>
     """,
     unsafe_allow_html=True
