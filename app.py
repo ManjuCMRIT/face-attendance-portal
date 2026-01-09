@@ -14,7 +14,7 @@ st.set_page_config(
 # --------------------------------------------------
 st.markdown(
     """
-    <h1 style="text-align:center;">🎓 Face Attendance System</h1>
+    <h1 style="text-align:center;">🎓 Intelli-Attendance App</h1>
     <p style="text-align:center; font-size:16px; color:gray;">
         AI-powered, role-based attendance management
     </p>
