@@ -106,7 +106,7 @@ st.divider()
 st.markdown(
     """
     <div style="text-align:center; font-size:13px; color:gray;">
-        Developed as part of AI-based Academic Automation<br>
+        Developed as part of Mega Project (MEP) <br>
         © CMR Institute of Technology
     </div>
     """,
