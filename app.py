@@ -14,7 +14,7 @@ st.set_page_config(
 # ==================================================
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
-    st.image("assets/cmrit_logo.png", width=160)
+    st.image("assets/logocmrit.png", width=160)
 
 # ==================================================
 # TITLE & TAGLINE
